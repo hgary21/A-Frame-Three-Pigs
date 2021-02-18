@@ -1,0 +1,158 @@
+<html>
+
+<head>
+	<script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+</head>
+
+<body>
+	<a-scene>
+		<a-assets>
+			<!-- https://hdrihaven.com/hdri/?c=high%20contrast&h=crosswalk -->
+			<img id="sky" src="assets/sky.jpg">
+
+			<!-- https://texturehaven.com/tex/?c=terrain&t=gravel_ground_01 -->
+			<img id="ground" src="assets/ground.jpg">
+
+			<!-- https://texturehaven.com/tex/?c=terrain&t=gravel_ground_01 -->
+			<img id="ground-normal" src="assets/ground-normal.jpg">
+
+			<!-- https://libreshot.com/brick-wall-texture-2/ -->
+			<img id="brick" src="assets/brick.jpg">
+
+			<!-- https://roofandbuildingservice.com.au/wp-content/uploads/2018/05/Tiled-roof-repair-and-maintenance.jpg -->
+			<img id="roof" src="assets/roof.jpg">
+
+			<!-- https://theconversation.com/open-windows-to-help-stop-the-spread-of-coronavirus-advises-architectural-engineer-142579 -->
+			<img id="window" src="assets/window.jpg">
+
+			<!-- https://www.upperdublin.net/product/disposal-door-wood/ -->
+			<img id="door" src="assets/door.jpg">
+
+			<!-- https://texturehaven.com/tex/?c=wood&t=wood_planks_dirt -->
+			<img id="wall-wood" src="assets/wall-wood.jpg">
+
+			<!-- https://texturehaven.com/tex/?c=wood&t=bark_brown_01 -->
+			<img id="roof-wood" src="assets/roof-wood.jpg">
+
+			<!-- https://www.goodtextures.com/cache/a63ef161/avbae2ab0d595674a0c0a.jpeg -->
+			<img id="wall-straw" src="assets/wall-straw.jpeg">
+
+			<!-- https://www.goodtextures.com/image/19723/seamlessstraw-0006 -->
+			<img id="roof-straw" src="assets/roof-straw.jpeg">
+
+			<!-- https://open3dmodel.com/3d-models/3d-model-low-poly-pig_43117.html -->
+			<a-asset-item id="pig-obj" src="assets/pig/pig.obj"></a-asset-item>
+			<a-asset-item id="pig-mtl" src="assets/pig/pig.mtl"></a-asset-item>
+
+			<!-- https://free3d.com/3d-model/wolf-rigged-and-game-ready-42808.html -->
+			<a-asset-item id="wolf" src="assets/wolf/Wolf-Blender-2.82a.gltf"></a-asset-item>
+
+		</a-assets>
+
+		<a-entity position="-12 0 -2" rotation="0 70 0" scale="0.6 0.6 0.6">
+			<a-box position="0 4 -4" rotation="0 0 0" width="10" height="8" depth="0.1" src="#wall-straw" repeat="2 4">
+			</a-box>
+			<a-box position="3 4 4" rotation="0 0 0" width="4" height="8" depth="0.1" src="#wall-straw" repeat="2 4">
+			</a-box>
+			<a-box position="-3 4 4" rotation="0 0 0" width="4" height="8" depth="0.1" src="#wall-straw" repeat="2 4">
+			</a-box>
+			<a-box position="0 6 4" rotation="0 0 0" width="2" height="4" depth="0.1" src="#wall-straw" repeat="1 2">
+			</a-box>
+
+			<a-box position="5 4 0" rotation="0 -90 0" width="8" height="8" depth="0.1" src="#wall-straw" repeat="2 4">
+			</a-box>
+			<a-box position="-5 4 0" rotation="0 -90 0" width="8" height="8" depth="0.1" src="#wall-straw" repeat="2 4">
+			</a-box>
+
+			<a-triangle position="0 8 4" vertex-a="0 5 0" vertex-b="-5 0 0" vertex-c="5 0 0" side="double"
+				src="#wall-straw" repeat="4 3"> </a-triangle>
+			<a-triangle position="0 8 -4" vertex-a="0 5 0" vertex-b="-5 0 0" vertex-c="5 0 0" side="double"
+				src="#wall-straw" repeat="4 3"> </a-triangle>
+
+			<a-box position="5 8 0" rotation="0 0 -45" width="14.1421356238" height="0.1" depth="12" src="#roof-straw"
+				color="#ABABAB"> </a-box>
+			<a-box position="-5 8 0" rotation="0 0 45" width="14.1421356238" height="0.1" depth="12" src="#roof-straw"
+				color="#ABABAB"> </a-box>
+
+			<a-box position="-3 4 4" width="2" height="2" depth="0.2" src="#window"></a-box>
+			<a-box position="3 4 4" width="2" height="2" depth="0.2" src="#window"></a-box>
+
+			<a-box position="-0.5 2 4.9" rotation="0 -60 0" width="2" height="4" depth="0.1" src="#door"></a-box>
+			<a-entity obj-model="obj: #pig-obj; mtl: #pig-mtl" position="0 0 0"></a-entity>
+		</a-entity>
+
+		<a-entity position="0 0 -10" scale="0.6 0.6 0.6">
+			<a-box position="0 4 -4" rotation="0 0 0" width="10" height="8" depth="0.1" src="#wall-wood" repeat="0.75 1">
+			</a-box>
+			<a-box position="3 4 4" rotation="0 0 0" width="4" height="8" depth="0.1" src="#wall-wood" repeat="0.75 1">
+			</a-box>
+			<a-box position="-3 4 4" rotation="0 0 0" width="4" height="8" depth="0.1" src="#wall-wood" repeat="0.75 1">
+			</a-box>
+			<a-box position="0 6 4" rotation="0 0 0" width="2" height="4" depth="0.1" src="#wall-wood" repeat="0.75 1">
+			</a-box>
+
+			<a-box position="5 4 0" rotation="0 -90 0" width="8" height="8" depth="0.1" src="#wall-wood" repeat="0.75 1">
+			</a-box>
+			<a-box position="-5 4 0" rotation="0 -90 0" width="8" height="8" depth="0.1" src="#wall-wood" repeat="0.75 1">
+			</a-box>
+
+			<a-triangle position="0 8 4" vertex-a="0 5 0" vertex-b="-5 0 0" vertex-c="5 0 0" side="double"
+				src="#wall-wood" repeat="1 0.75"> </a-triangle>
+			<a-triangle position="0 8 -4" vertex-a="0 5 0" vertex-b="-5 0 0" vertex-c="5 0 0" side="double"
+				src="#wall-wood" repeat="1 0.75"> </a-triangle>
+
+			<a-box position="5 8 0" rotation="0 0 -45" width="14.1421356238" height="0.1" depth="12" src="#roof-wood"
+				color="#ABABAB"> </a-box>
+			<a-box position="-5 8 0" rotation="0 0 45" width="14.1421356238" height="0.1" depth="12" src="#roof-wood"
+				color="#ABABAB"> </a-box>
+
+			<a-box position="-3 4 4" width="2" height="2" depth="0.2" src="#window"></a-box>
+			<a-box position="3 4 4" width="2" height="2" depth="0.2" src="#window"></a-box>
+
+			<a-box position="-0.5 2 4.9" rotation="0 -60 0" width="2" height="4" depth="0.1" src="#door"></a-box>
+			<a-entity obj-model="obj: #pig-obj; mtl: #pig-mtl" position="0 0 0"></a-entity>
+		</a-entity>
+
+		<a-entity position="12 0 -2" rotation="0 -70 0" scale="0.6 0.6 0.6">
+			<a-box position="0 4 -4" rotation="0 0 0" width="10" height="8" depth="0.1" src="#brick" repeat="2 4">
+			</a-box>
+			<a-box position="3 4 4" rotation="0 0 0" width="4" height="8" depth="0.1" src="#brick" repeat="2 4">
+			</a-box>
+			<a-box position="-3 4 4" rotation="0 0 0" width="4" height="8" depth="0.1" src="#brick" repeat="2 4">
+			</a-box>
+			<a-box position="0 6 4" rotation="0 0 0" width="2" height="4" depth="0.1" src="#brick" repeat="1 2">
+			</a-box>
+
+			<a-box position="5 4 0" rotation="0 -90 0" width="8" height="8" depth="0.1" src="#brick" repeat="2 4">
+			</a-box>
+			<a-box position="-5 4 0" rotation="0 -90 0" width="8" height="8" depth="0.1" src="#brick" repeat="2 4">
+			</a-box>
+
+			<a-triangle position="0 8 4" vertex-a="0 5 0" vertex-b="-5 0 0" vertex-c="5 0 0" side="double"
+				src="#brick" repeat="4 3"> </a-triangle>
+			<a-triangle position="0 8 -4" vertex-a="0 5 0" vertex-b="-5 0 0" vertex-c="5 0 0" side="double"
+				src="#brick" repeat="4 3"> </a-triangle>
+
+			<a-box position="5 8 0" rotation="0 0 -45" width="14.1421356238" height="0.1" depth="12" src="#roof"
+				color="#ABABAB"> </a-box>
+			<a-box position="-5 8 0" rotation="0 0 45" width="14.1421356238" height="0.1" depth="12" src="#roof"
+				color="#ABABAB"> </a-box>
+
+			<a-box position="-3 4 4" width="2" height="2" depth="0.2" src="#window"></a-box>
+			<a-box position="3 4 4" width="2" height="2" depth="0.2" src="#window"></a-box>
+
+			<a-box position="-0.5 2 4.9" rotation="0 -60 0" width="2" height="4" depth="0.1" src="#door"></a-box>
+
+			<a-entity obj-model="obj: #pig-obj; mtl: #pig-mtl" position="0 0 0"></a-entity>
+			<a-box position="3.5 7 3" width="2" height="14" depth="2" src="#brick" repeat="2 10">
+			</a-box>
+		</a-entity>
+
+		<a-entity gltf-model="#wolf" position="-3 -0.25 -1" scale="3 3 3" Animation="property:rotation; to:0 360 0; loop:true; dur:5000; easing:linear;"></a-entity>
+
+		<a-box position="0 0 -10" width="64" height="0.1" depth="64" src="#ground" normal-map="#ground-normal"></a-box>
+		<a-sky src="#sky"></a-sky>
+	</a-scene>
+</body>
+
+</html>
